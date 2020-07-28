@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <section id="profile">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-8 mx-auto">
+            <div class="card my-3">
+                <img src="{{ user.profile.image.url }}" alt="" class="card-img-top img-fluid profile-pic-lg">
+                <div class="card-body bg-black text-white">
+                    <h3 class="display-4 text-center">{{ user.username }}</h3>
+                    <p class="lead text-center">{{ user.email }}</p>
+                    <h3>Profile Information</h3>
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ u_form|crispy }}
+                        {{ p_form|crispy }}
+                        <button class="btn btn-light btn-block" type="submit">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="main-footer" class="text-white text-center p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="text-muted mt-3">Copyright <span>&copy;</span> Mostafa Rafid</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}

@@ -1,0 +1,53 @@
+body {
+    font-family: 'Kalam', cursive;
+    background: #cccccc;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.logo {
+    height: 100px;
+    width: 200px;
+}
+
+#navbarCollapse a {
+    color: #ffffff;
+}
+
+#navbarCollapse .active {
+    border-left: 1px white solid;
+}
+
+#main-footer {
+    background-color: black;
+}
+
+.profile-pic {
+    height: 60px;
+    width: 60px;
+}
+
+.profile-pic-lg {
+    max-height: 600px;
+}
+
+.post-title {
+    color: #fff;
+}
+
+.post-title:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
+nav a:hover {
+    opacity: 0.7;
+}
+
+#paginate a {
+    color: #000;
+    background: #fff;
+}

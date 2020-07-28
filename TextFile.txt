@@ -1,0 +1,12 @@
+*fix timezone ---done--blog.model>imported datetime>used datetime.datetime.now[no () after now] in the default value
+*fix footers---done-- hard coded.not efficient
+*complete category in an efficient way
+*fix pagination design
+*set author profile link to dp
+*comment system
+*add functionality to add link as a post
+*add functionality to add picture as a post
+*complete the sidebar
+
+Bugs:
+*some primary keys were added in the category table in db

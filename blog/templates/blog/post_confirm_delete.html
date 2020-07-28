@@ -1,0 +1,30 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<section id="post-delete" class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card bg-black text-white">
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                        <h3>Are you sure you want to delete the post "{{ post.title }}"?</h3>
+                        <button class="btn bg-white" type="submit">Delete</button>
+                        <a href="{% url 'post-detail' post.id %}" class="btn bg-white" type="submit">Cancel</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer id="main-footer" class="text-white text-center fixed-bottom p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="text-muted mt-3">Copyright <span>&copy;</span> Mostafa Rafid</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
